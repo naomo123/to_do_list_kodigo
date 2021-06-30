@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet"href="css/estilo.css" />
+    <script src="js/Buscar.js"></script>
+    <script src="js/principal.js"></script>
+    <script src="js/Object.js"></script>
+
+
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Mi lista de que haceres</title>
+  </head>
+  <body>
+
+
+
+
+          <div class="menu">
+              <b class="tusk">TASK LIST</b>
+                <b>
+                <button type="button" class="navOpt" id="crear">Crear Tarea</button><button type="button" class="navOpt" id="Lista">Lista</button>
+              </b>
+          </div>
+
+          <div class="Content">
+              <div class="form">
+                <h1>POR HACER</h1>
+                 <p>titulo</p>
+                 <input type="text"  class="input" id="Content__titulo" value="" maxlength="25">
+                 <p>Hora programada</p>
+                 <input type="text" class="input" id="Content__Hora" value="" placeholder="escribe 00:00 PM o AM">
+                  <p>Prioridad</p>
+                  <div class="boxel">
+
+                      <input type="radio" class="center" id="alto" name="sa" value="Alto" checked >
+                      <input type="radio" class="center" id="medio" name="sa" value="Medio">
+                      <input type="radio" class="center" id="Bajo" name="sa" value="Bajo">
+                      <br><b class="sep">Alto</b> <b class="sep">Medio</b> <b class="sep">Bajo</b></br>
+
+                  </div>
+                    <p>Comentarios</p>
+                  <textarea name="comments" class="commentary" id="comments" maxlength="40"></textarea>
+                  <b class =caracteres id="caracter">00/40</b>
+                  <button type="button" class="Agregar" id="add">Guardar</button>
+              </div>
+          </div>
+
+
+          <div class="buscar">
+
+              <div class="buscar__form">
+
+                <div class="buscar__menu">
+                  <b class="buscar__titulo">TAREAS PENDIENTES</b>
+                  <select name="lista" class="buscar__lista" id="list">
+                  <option value="">--Buscar--</option>
+                  <option value="De altas a Bajas">De altas a Bajas</option>
+                  <option value="De Bajas a Altas">De Bajas a Altas</option>
+                  <option value="Solo Altas">Solo Altas</option>
+                  <option value="Solo Medias">Solo Medias</option>
+                  <option value="Solo Bajas">Solo Bajas</option>
+                  </select>
+                </div>
+
+                <div class="buscar__canvas"><div class="buscar__content" id="contenido"></div></div>
+              </div>
+          </div>
+
+          <div class="Alert">
+
+            <div class="Alert__box">
+
+
+            <div class="Alert__Header">
+
+              <b class="Alert_message" id="Message">Ingreso con exito</b>
+
+            </div>
+
+            <div class="Alert__content">
+
+             <button type="button" class="Alert_button" id="botonAlerta">Aceptar</button>
+
+            </div>
+          </div>
+          </div>
+
+
+
+
+
+  </body>
+</html>

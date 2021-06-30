@@ -1,0 +1,416 @@
+
+*
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+font-family: 'Roboto', sans-serif;
+}
+
+:root
+{
+  --leftCrear:87vw;
+  --leftLista:95vw;
+}
+
+/* aca empieza tooodo el primer form */
+p
+{
+  font-size: 20px;
+  padding-left: 10px;
+  font-weight: bold;
+}
+
+.input
+{
+  width: 450px;
+  margin: 10px 20px;
+  font-size: 20px;
+  border: 2px solid #172262;
+  text-align: center;
+}
+
+
+.input::placeholder
+{
+  text-align: center;
+  font-size: 20px;
+}
+
+.red
+{
+  border: 2px solid red;
+}
+
+h1
+{
+  text-align: center;
+  padding: 50px;
+}
+
+
+
+
+.Content
+{
+
+  padding-top: 30px;
+}
+
+
+.form
+{
+  background-color: white;
+  position:relative;
+  margin: 70px auto;
+  box-shadow: 21px 25px 10px grey;
+  border: 3px dashed black;
+  width: 500px;
+  height: 545px;
+
+}
+
+.boxel
+{
+  position: relative;
+  margin: 0 auto;
+  border: 2px solid grey;
+  width: 450px;
+  height: 75px;
+}
+
+.center
+{
+  display:inline;
+  position: relative;
+  margin-left: 100px;
+  margin-top: 30px;
+}
+
+.sep
+{
+  display: inline-block;
+  margin-left: 82px;
+
+}
+
+.commentary
+{
+  position: relative;
+  margin-top: 10px;
+  margin-left:20px;
+  border: 2px solid #172262;
+  width: 450px;
+  height: 70px;
+  resize: none;
+}
+
+.Agregar
+{
+  position:relative;
+  margin-top: -8px;
+  margin-left: 190px;
+  font-size: 30px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #172262;
+  border: 0;
+  outline: 4px solid #0F1749;
+
+}
+
+.tusk
+{
+    padding:10px;
+    line-height: 1.9;
+}
+
+.menu
+{
+  
+  background-color: #172262;
+  color: white;
+  width: 100vw;
+  height: 6vh;
+  font-size: 20px;
+}
+
+#crear
+{
+  position:absolute;
+  top: 1vh;
+  left: var(--leftCrear);
+  color: white;
+  font-size: 20px;
+  background-color:  #172262;
+  border:0;
+}
+
+#Lista
+{
+  position:absolute;
+  top: 1vh;
+  left: var(--leftLista);
+  color: white;
+  font-size: 20px;
+  background-color: #172262;
+  border:0;
+}
+
+
+button:hover
+{
+ cursor: pointer;
+}
+
+.caracteres
+{
+display: flex;
+position: relative;
+margin-left: 430px;
+margin-top: -3px;
+font-size: 13px;
+}
+/* aca Termina tooodo el primer form */
+
+/* aca Empieza el nuevo form */
+
+.buscar
+{
+    display: none;
+    padding-top: 46px;
+}
+
+.buscar__form
+{
+  position: relative;
+  margin: 70px auto;
+  width: 70%;
+  height: 500px;
+  border: 3px dashed black;
+  overflow: auto;
+  box-shadow: 26px 20px 10px grey;
+}
+
+.buscar__menu
+{
+  position:fixed;
+  display:inherit;
+  background-color: white;
+  width: 67%;
+  height: 160px;
+
+
+
+}
+
+.buscar__content
+{
+
+  padding-top: 75px;
+}
+
+.buscar__canvas
+{
+    
+    margin-top: 100px;
+}
+
+.buscar__titulo
+{
+
+  display: block;
+  text-align: center;
+  margin-top: 80px;
+  font-weight: bold;
+  font-size: 30px;
+}
+
+.buscar__lista
+{
+  position:relative;
+  display: block;
+  align-items: center;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  border: 2px solid grey;
+}
+
+.buscar__etiqueta
+{
+  display:inline-block;
+  position: relative;
+  background-color: #0F1749;
+  margin-left: 14px;
+  width: 500px;
+  height: 145px;
+  overflow: auto;
+  z-index: -1;
+}
+
+.buscar__etiqueta .head
+{
+
+  color:white;
+  height: 40px;
+}
+
+/* Aca empieza codigo de color */
+.buscar__etiqueta  #Alto{background-color:red;}
+.buscar__etiqueta  #Bajo{background-color:green;}
+.buscar__etiqueta  #Medio{background-color:#D2C236;}
+/*  aca termina codigo de color  */
+
+.hora
+{
+  line-height: 1.6;
+  margin-left: 10px;
+}
+
+.prioridad
+{
+  line-height: 1.6;
+  margin-left: 370px;
+}
+
+.buscar__tarea
+{
+  position: relative;
+  color: white;
+  padding: 3px;
+  margin-left: 16px;
+  width: 450px;
+  border-bottom: 2px solid white;
+}
+
+.buscar__comentario
+{
+  /* recordatorio adaptarlo para solo recibir 40 caracteres */
+  color: white;
+  padding-top:30px;
+  font-size: 15px;
+}
+
+/* aca termina el nuevo form */
+
+
+/* aca empieza el form de alerta*/
+
+.Alert
+{
+  display: none;
+padding-top: 100px;
+}
+
+.Alert__box
+{
+  position: relative;
+  border: 2px solid black;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
+  box-shadow: 15px 20px 10px grey;
+  animation-name: appears;
+  animation-duration: 0.5s;
+}
+
+
+@keyframes appears
+{
+  from{width: 20px; height: 20px}
+  to{width: 300px; height: 300px}
+}
+
+
+
+.Alert__Header
+{
+  border-bottom:2px solid black;
+  color: #FFF;
+  background-color: #172262;
+  height: 100px;
+  font-size: 30px;
+  text-align: center;
+  animation-name: grow;
+  animation-duration: 0.5s;
+}
+
+@keyframes grow
+{
+    from{font-size: 5px}
+    to{font-size: 40px}
+}
+
+
+
+.Alert_button
+{
+
+  background-color: #172262;
+  color: #FFF;
+  font-size: 35px;
+  padding: 10px;
+margin: 50PX;
+  border:2px solid black;
+  animation-name:ghost;
+  animation-duration: 1s;
+}
+
+@keyframes ghost
+{
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+
+
+
+
+
+
+/* aca termina el form de alerta*/
+
+/*  Aca empieza el disque adaptativo xddd no me jusgues aprendi css literalmente en 2 dias xdddddd */
+@media screen and (max-width: 1263px)
+{
+  #crear
+  {
+    --leftCrear:87vw;
+  }
+
+  #Lista
+  {
+    --leftLista:95vw;
+  }
+
+}
+
+
+@media screen and (max-width: 991px)
+{
+  #crear
+  {
+    --leftCrear:74vw;
+  }
+
+  #Lista
+  {
+    --leftLista:90vw;
+  }
+}
+
+@media screen and (max-width: 767px)
+{
+  #crear
+  {
+    --leftCrear:70vw;
+  }
+
+  #Lista
+  {
+    --leftLista:87vw;
+  }
+}
