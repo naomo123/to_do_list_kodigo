@@ -1,15 +1,13 @@
 <!DOCTYPE html>
+<html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet"href="css/estilo.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <script src="js/Buscar.js"></script>
+    <link rel="stylesheet"href="css/otherstyle.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/principal.js"></script>
-    <script src="js/Object.js"></script>
 
-
-    
-    <title>To do list</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <title>Mi lista de que haceres</title>
   </head>
   <body>
 
@@ -17,32 +15,64 @@
 
 
           <div class="menu">
+            <div class="menu__tusk">
               <b class="tusk">TASK LIST</b>
-                <b>
-                <button type="button" class="navOpt" id="crear">Crear Tarea</button><button type="button" class="navOpt" id="Lista">Lista</button>
-              </b>
+            </div>
+
+              <div class="menu__button ">
+                <button type="button" class="navOpt menu__pad" id="crear">Crear Tarea</button>
+              </div>
+
+              <div class="menu__button ">
+                <button type="button" class="navOpt menu__pad" id="Lista">Lista</button>
+              </div>
+
           </div>
+
+
+            <div class="pag">
+
 
           <div class="Content">
               <div class="form">
-                <h1>POR HACER</h1>
-                 <p>titulo</p>
-                 <input type="text"  class="input" id="Content__titulo" value="" maxlength="25">
-                 <p>Hora programada</p>
-                 <input type="text" class="input" id="Content__Hora" value="" placeholder="escribe 00:00 PM o AM">
-                  <p>Prioridad</p>
-                  <div class="boxel">
-
-                      <input type="radio" class="center" id="alto" name="sa" value="Alto" checked >
-                      <input type="radio" class="center" id="medio" name="sa" value="Medio">
-                      <input type="radio" class="center" id="Bajo" name="sa" value="Bajo">
-                      <br><b class="sep">Alto</b> <b class="sep">Medio</b> <b class="sep">Bajo</b></br>
-
+                <div class="form__Content">
+                  <div class="form__titulo">
+                    <h1>POR HACER</h1>
                   </div>
-                    <p>Comentarios</p>
-                  <textarea name="comments" class="commentary" id="comments" maxlength="40"></textarea>
-                  <b class =caracteres id="caracter">00/40</b>
-                  <button type="button" class="Agregar" id="add">Guardar</button>
+
+                    <div class="form_optc">
+                      <p>titulo</p>
+                      <input type="text"  class="input" id="Content__titulo" value="" maxlength="19">
+                    </div>
+
+                    <div class="form_optc" >
+                      <p>Hora programada</p>
+                      <input type="text" class="input" id="Content__Hora" value="" placeholder="escribe 00:00 PM o AM">
+                    </div>
+
+                    <div class="form_optc">
+                      <p>Prioridad</p>
+                      <div class="boxel">
+
+                          <input type="radio" class="center" id="alto" name="sa" value="Alto" checked >
+                          <input type="radio" class="center" id="medio" name="sa" value="Medio">
+                          <input type="radio" class="center" id="Bajo" name="sa" value="Bajo">
+                          <br><b class="sep">Alto</b> <b class="sep">Medio</b> <b class="sep">Bajo</b></br>
+
+                      </div>
+                    </div>
+
+                    <div class="form_optc">
+                      <p>Comentarios</p>
+                    <textarea name="comments" class="commentary input" id="comments" maxlength="35"></textarea>
+                    <b class =caracteres id="caracter">00/35</b>
+                    </div>
+
+                   <div class="form_optc">
+                       <button type="button" class="Agregar" id="add">Guardar</button>
+                   </div>
+                </div>
+
               </div>
           </div>
 
@@ -52,25 +82,52 @@
               <div class="buscar__form">
 
                 <div class="buscar__menu">
-                  <b class="buscar__titulo">TAREAS PENDIENTES</b>
-                  <select name="lista" class="buscar__lista" id="list">
-                  <option value="">--Buscar--</option>
-                  <option value="De altas a Bajas">De altas a Bajas</option>
-                  <option value="De Bajas a Altas">De Bajas a Altas</option>
-                  <option value="Solo Altas">Solo Altas</option>
-                  <option value="Solo Medias">Solo Medias</option>
-                  <option value="Solo Bajas">Solo Bajas</option>
-                  </select>
+                  <div class="buscar__c">
+
+                    <div class="c__content">
+                      <div class="Buscar__optc">
+                        <b class="buscar__titulo">TAREAS PENDIENTES</b>
+                      </div>
+
+                      <div class="Buscar__optc">
+                        <select name="lista" class="buscar__lista" id="list">
+                        <option value="">--Buscar--</option>
+                        <option value="De altas a Bajas">De altas a Bajas</option>
+                        <option value="De Bajas a Altas">De Bajas a Altas</option>
+                        <option value="Solo Altas">Solo Altas</option>
+                        <option value="Solo Medias">Solo Medias</option>
+                        <option value="Solo Bajas">Solo Bajas</option>
+                        </select>
+                      </div>
+                    </div>
+
+                  </div>
+
+
                 </div>
 
-                <div class="buscar__canvas"><div class="buscar__content" id="contenido"></div></div>
+                <div class="buscar__canvas" id="etiqueta">
+
+
+
+                  <!-- aca abajo es la etiqueta de las tareas -->
+
+
+
+
+
+                  <!-- aca termina xd -->
+
+
               </div>
+
+
+                </div>
           </div>
 
           <div class="Alert">
 
             <div class="Alert__box">
-
 
             <div class="Alert__Header">
 
@@ -83,12 +140,14 @@
              <button type="button" class="Alert_button" id="botonAlerta">Aceptar</button>
 
             </div>
+
           </div>
           </div>
 
 
-
+</div>
 
 
   </body>
 </html>
+
