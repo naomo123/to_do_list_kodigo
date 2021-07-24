@@ -1,3 +1,22 @@
+
+//{
+//  hora: 1,
+//  turno:AM,
+//  id: 3 es alta , 2 es media , 1 es baja ,
+//  prioridad:"Alta",
+//  tarea: "Jugar",
+//  comentario: "Jugar en el pateo"
+//},
+
+var toDo =
+[
+
+]
+
+//////////////////////////////////
+
+
+
 var IDbuscador=0;
 
 
@@ -56,10 +75,10 @@ alert__box__button = document.getElementById("botonAlerta");
 caracter = document.getElementById("caracter");
 ///////////////////////////////////////////////////////////
 lista = document.getElementById("list");
-Generador__Etiqueta = document.getElementById("contenido");
+Generador__Etiqueta = document.getElementById("etiqueta");
 
 
-regex = /^([0]\d|[1][0-2]):([0-5]\d)\s?(?:AM|PM)$/i;
+regex = /^([0]\d|[1][0-2]):([0-5]\d)\s?(?:AM|PM)$/;
 
 var recibir="";
 var convertir="";
@@ -70,7 +89,7 @@ setInterval(function(){
 
   recibir = Content__TxtComent.value;
   convertir = recibir.toString();
- caracter.innerText = ceros(convertir.length,"00",convertir.length,"00",99)+"/"+"40";
+ caracter.innerText = ceros(convertir.length,"00",convertir.length,"00",99)+"/"+"35";
 
 
 },10);
@@ -136,7 +155,7 @@ Content__add.addEventListener('click',()=>
 
 red[0].classList.remove("red");
 red[1].classList.remove("red");
-Content__TxtComent.style.border="2px solid black";
+Content__TxtComent.style.border="5px solid #45a";
   toDo.push(
   {
    hora:Content__Hora.value.substring(0,5),
@@ -146,7 +165,7 @@ Content__TxtComent.style.border="2px solid black";
    tarea: Content__titulo.value,
    comentario:Content__TxtComent.value
   });
-  
+
     showMessage("Ingreso exitoso!!");
 }
 else
@@ -206,17 +225,13 @@ function turnRed()
 
 if (Content__TxtComent.value==0)
 {
-  Content__TxtComent.style.border = "2px solid red";
+  Content__TxtComent.style.borderBottom = "5px solid red";
 }
 }
 
 
 // aca termina toda la parte del menu y el evento add task!!!
 
-
-// esta funcion agrega un cero segun la cadena que se le de osea que el numero afectado se vera asi 01 en lugar de solo 1 depende del string de ceros que le de y el rango asi seran los 0 que acompañaran al los numeros
-// el contador es "00" cada cero que agregue sera el que acompañara al numero luego en el rango se pone el mayor numero por ejemplo si la cadena es "00" pondras en rango 99 y asi entre mas ceros añadas por si quieres
-// copiar esta funcion para algo recuerda que yo me la invente xdddd Creditos:Spiderfan179(Daniel de jesus paredes alvarez)
 function ceros(numeroOrg,contador,tamaño1,tamaño2,rango)
 {
 
@@ -316,16 +331,18 @@ html="";
       {
 
         toDo.sort(compare3);
+		toDo.sort( compare4 );
         toDo.sort(compare);
-        toDo.sort( compare4 );
+
         dibujarEtiquetas();
       }
       if (expresion=="De Bajas a Altas")
       {
 
         toDo.sort( compare3 );
+		toDo.sort( compare4 );
         toDo.sort( compare2 );
-        toDo.sort( compare4 );
+
         dibujarEtiquetas();
       }
 
@@ -365,7 +382,7 @@ function dibujarEtiquetas()
 {
   for (var i = 0; i < toDo.length; i++)
   {
-    html+= "<div class=buscar__etiqueta> <div class=head id="+toDo[i].prioridad+"> <b class=hora>"+toDo[i].hora+ toDo[i].turno+"</b> <b class=prioridad>"+toDo[i].prioridad+"</b></div> <h1 class=buscar__tarea>"+toDo[i].tarea+"</h1> <p class=buscar__comentario>"+toDo[i].comentario+"</p> </div>";
+  html+= "<div class=buscar__etiqueta> <div class=head id="+toDo[i].prioridad+"> <b class=hora>"+toDo[i].hora+ toDo[i].turno+"</b> <b class=prioridad>"+toDo[i].prioridad+"</b></div> <div class=body__etiqueta>  <div class=tarea> <h1 class=buscar__tarea>"+toDo[i].tarea+"</h1> </div> <p class=buscar__comentario>"+toDo[i].comentario+"</p> </div> </div>";
   }
   Generador__Etiqueta.innerHTML=html;
 }
@@ -376,7 +393,8 @@ function dibujarEtiquetas2(rango)
   {
     if (toDo[i].id == rango)
     {
-    html+= "<div class=buscar__etiqueta> <div class=head id="+toDo[i].prioridad+"> <b class=hora>"+toDo[i].hora+ toDo[i].turno+"</b> <b class=prioridad>"+toDo[i].prioridad+"</b></div> <h1 class=buscar__tarea>"+toDo[i].tarea+"</h1> <p class=buscar__comentario>"+toDo[i].comentario+"</p> </div>";
+
+    html+= "<div class=buscar__etiqueta> <div class=head id="+toDo[i].prioridad+"> <b class=hora>"+toDo[i].hora+ toDo[i].turno+"</b> <b class=prioridad>"+toDo[i].prioridad+"</b></div> <div class=body__etiqueta>  <div class=tarea> <h1 class=buscar__tarea>"+toDo[i].tarea+"</h1> </div> <p class=buscar__comentario>"+toDo[i].comentario+"</p> </div> </div>";
     }
   }
   Generador__Etiqueta.innerHTML=html;
